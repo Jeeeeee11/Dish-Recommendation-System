@@ -52,7 +52,8 @@ class TextGeneration:
             "giovanni": "asset/frame/food-image-logo-bg-g.png",
         }
         self.fonts = {
-            "title": ImageFont.truetype("asset/fonts/Poppins-Bold.ttf", 70),
+            font_path = os.path.abspath("asset/fonts/Poppins-Bold.ttf")
+            title_font = ImageFont.truetype(font_path, size=70)
             "sub_title": ImageFont.truetype("asset/fonts/Poppins-Medium.ttf", 30),
             "body_bold": ImageFont.truetype("asset/fonts/Montserrat-Bold.ttf", 22),
             "body": ImageFont.truetype("asset/fonts/Montserrat-Regular.ttf", 18),
