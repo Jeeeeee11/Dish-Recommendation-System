@@ -52,7 +52,11 @@ def convert_portions_to_grams(ingredients):
     return converted_ingredients
 
 def extract_amount_unit_name(ingredient):
-    amount = re.findall(r'\d+', ingredient)[0]
+    amount_matches = re.findall(r'\d+', ingredient)
+    if amount_matches:
+        amount = amount_matches[0]
+    else:
+        amount = ""
     unit = re.findall(r'\b(?:piece|pieces|cloves)\b', ingredient)
     if unit:
         unit = unit[0]
