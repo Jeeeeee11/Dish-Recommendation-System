@@ -4,11 +4,11 @@ import requests
 import re
 
 # Set up your OpenAI API credentials
-openai.api_key = 'YOUR_OPENAI_API_KEY'
+openai.api_key = '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'
 
 # Edamam API credentials
-edamam_app_id = 'YOUR_EDAMAM_APP_ID'
-edamam_app_key = 'YOUR_EDAMAM_APP_KEY'
+edamam_app_id = 'b0676972'
+edamam_app_key = 'f0125506ff24f7a645dc0f6771731116'
 
 def generate_dishes(ingredients):
     # Convert portions to a consistent unit, e.g., grams
