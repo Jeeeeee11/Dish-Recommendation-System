@@ -66,13 +66,17 @@ def extract_amount_unit_name(ingredient):
     return amount, unit, name
 
 def convert_to_grams(amount, unit):
+    try:
+        grams = float(amount)
+    except ValueError:
+        grams = 0.0
+
     # Implement your own conversion logic here
     if unit == 'pieces':
-        grams = float(amount) * 100  # Assuming a piece is approximately 100 grams
+        grams *= 100  # Assuming a piece is approximately 100 grams
     elif unit == 'cloves':
-        grams = float(amount) * 4  # Assuming a clove is approximately 4 grams
-    else:
-        grams = float(amount)
+        grams *= 4  # Assuming a clove is approximately 4 grams
+
     return grams
 
 def get_recipe_image(title):
